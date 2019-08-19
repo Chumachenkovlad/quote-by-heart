@@ -1,1 +1,1 @@
-web: node dist/apps/api/main.js
+web: ls -lah && node dist/apps/api/main.js
