@@ -2,14 +2,13 @@ import { Quote } from '@abh/api-interfaces';
 import { HttpService, Injectable } from '@nestjs/common';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { environment } from '../environments/environment';
 @Injectable()
 export class QuoteService {
   constructor(private httpService: HttpService) {}
   getQuote(): Observable<Quote> {
     return this.httpService
-      .get<Quote>(
-        'https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=ru'
-      )
+      .get<Quote>(`${environment.apiUrl}/api/quote`)
       .pipe(map(res => res.data));
   }
 }
