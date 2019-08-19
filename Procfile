@@ -1,1 +1,1 @@
-web: ls -lah && node dist/apps/api/main.js
+web: ng build api && node dist/apps/api/main.js
