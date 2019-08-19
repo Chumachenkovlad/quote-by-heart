@@ -1,6 +1,5 @@
 import { Quote } from '@abh/api-interfaces';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { QuoteService } from '../quote.service';
 
 @Component({
